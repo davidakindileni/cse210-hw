@@ -26,5 +26,7 @@ class Program
         double listAvg = myList.Average();
         Console.WriteLine($"The average of the list is {listAvg}");
 
+        int listMax = myList.Max();
+        Console.WriteLine($"The largest number in the list is {listMax}");
     }
 }
