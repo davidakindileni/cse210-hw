@@ -5,6 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        // declare letterGrade as a string variable
+        string letterGrade;
+
         // request input of the grade percentage
         Console.Write("Please input your grade percentage: ");
         string grade = Console.ReadLine();
@@ -15,21 +18,24 @@ class Program
         // iterate to determine the letter grade
         if (intGrade >= 90)
         {
-            Console.WriteLine("Your letter grade is A");
+            letterGrade = "A";
         }   else if (intGrade >= 80)
             {
-                Console.WriteLine("Your letter grade is B");
+                letterGrade = "B";
             }   else if (intGrade >= 70)
                 {
-                    Console.WriteLine("Your letter grade is C");
+                    letterGrade = "C";
                 }   else if (intGrade >= 60)
                     {
-                        Console.WriteLine("Your letter grade is D");
+                        letterGrade = "D";
                     }
         else
         {
-            Console.WriteLine("Your letter grade is F");
+            letterGrade = "F";
         }
+
+        // print the letter grade
+        Console.WriteLine($"Your letter grade is {letterGrade}");
 
         // determine if the grade percentage passed or not and display appropriate message
         if (intGrade >= 70)
@@ -39,7 +45,5 @@ class Program
             {
                 Console.WriteLine("Don't give up. Please try again. You've got this!");
             }
-
-        
     }
 }
