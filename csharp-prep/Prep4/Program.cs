@@ -32,5 +32,14 @@ class Program
         int listMinAbvZero = myList.Where(f => f > 0).Min();
         Console.WriteLine($"The smallest positive number in the list is {listMinAbvZero}");
 
+        var sortedList = myList.OrderBy(num => num); 
+        // display the contents of the list
+        foreach (int sortedNum in sortedList)
+            {
+                Console.WriteLine(sortedNum);
+            }
+    
+
+
     }
 }
