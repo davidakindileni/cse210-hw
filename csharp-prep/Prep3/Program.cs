@@ -4,32 +4,40 @@ class Program
 {
     static void Main(string[] args)
     {
-        string doGuess  = "yes";
-        // generate the random number
-        int magicNumber = new Random().Next(1, 100);
-
-        int numOfGuesses = 0;
+        string playAgain = "yes";
         do
         {
-            Console.Write("What is the guess number? : ");
-            string guessNum = Console.ReadLine();
-            int guessNumber = int.Parse(guessNum);
-            if (guessNumber > magicNumber)
+            string doGuess  = "yes";
+            // generate the random number
+            int magicNumber = new Random().Next(1, 100);
+
+            int numOfGuesses = 0;
+            do
             {
-                Console.WriteLine("Go lower");
-                numOfGuesses++;
-            } else if (guessNumber < magicNumber)
+                Console.Write("What is the guess number? : ");
+                string guessNum = Console.ReadLine();
+                int guessNumber = int.Parse(guessNum);
+                if (guessNumber > magicNumber)
                 {
-                    Console.WriteLine("Go higher");
+                    Console.WriteLine("Go lower");
                     numOfGuesses++;
-                }
-                    else if (guessNumber == magicNumber)
+                } else if (guessNumber < magicNumber)
                     {
+                        Console.WriteLine("Go higher");
                         numOfGuesses++;
-                        Console.WriteLine($"You guessed it right in {numOfGuesses} guessess.");
-                        doGuess = "no";
                     }
-        } while (doGuess == "yes");
+                        else if (guessNumber == magicNumber)
+                        {
+                            numOfGuesses++;
+                            Console.WriteLine($"You guessed it right in {numOfGuesses} guessess.");
+                            doGuess = "no";
+                        }
+            } while (doGuess == "yes");
+
+            Console.Write("Would you like to play again? ");
+            playAgain = Console.ReadLine();
+        } while (playAgain == "yes");
+
 
     }
 }
