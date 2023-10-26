@@ -28,5 +28,9 @@ class Program
 
         int listMax = myList.Max();
         Console.WriteLine($"The largest number in the list is {listMax}");
+
+        int listMinAbvZero = myList.Where(f => f > 0).Min();
+        Console.WriteLine($"The smallest positive number in the list is {listMinAbvZero}");
+
     }
 }
