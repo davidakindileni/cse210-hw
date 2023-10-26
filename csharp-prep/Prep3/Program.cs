@@ -8,6 +8,7 @@ class Program
         // generate the random number
         int magicNumber = new Random().Next(1, 100);
 
+        int numOfGuesses = 0;
         do
         {
             Console.Write("What is the guess number? : ");
@@ -16,13 +17,16 @@ class Program
             if (guessNumber > magicNumber)
             {
                 Console.WriteLine("Go lower");
+                numOfGuesses++;
             } else if (guessNumber < magicNumber)
                 {
                     Console.WriteLine("Go higher");
+                    numOfGuesses++;
                 }
                     else if (guessNumber == magicNumber)
                     {
-                        Console.WriteLine("You guess it right!");
+                        numOfGuesses++;
+                        Console.WriteLine($"You guessed it right in {numOfGuesses} guessess.");
                         doGuess = "no";
                     }
         } while (doGuess == "yes");
