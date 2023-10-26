@@ -22,5 +22,9 @@ class Program
 
         int listSum = myList.Sum();
         Console.WriteLine($"The sum of the list is {listSum}");
+
+        double listAvg = myList.Average();
+        Console.WriteLine($"The average of the list is {listAvg}");
+
     }
 }
