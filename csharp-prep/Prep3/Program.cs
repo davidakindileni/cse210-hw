@@ -5,9 +5,9 @@ class Program
     static void Main(string[] args)
     {
         string doGuess  = "yes";
-            Console.Write("What is the magic number? : ");
-            string magicNum = Console.ReadLine();
-            int magicNumber = int.Parse(magicNum);
+        // generate the random number
+        int magicNumber = new Random().Next(1, 100);
+
         do
         {
             Console.Write("What is the guess number? : ");
