@@ -34,8 +34,28 @@ class Program
             letterGrade = "F";
         }
 
+        // Declare variables lastDigit and gradeSign
+        int lastDigit;
+
+        lastDigit = intGrade % 10;
+
+        // Determine the grade sign
+        string gradeSign = "";
+
+        if (letterGrade != "F")
+        {
+            if (lastDigit >= 7 && letterGrade != "A")
+                {
+                    gradeSign = "+";
+                }
+            else if (lastDigit < 3)
+                {
+                    gradeSign = "-";
+                }
+        }
+
         // print the letter grade
-        Console.WriteLine($"Your letter grade is {letterGrade}");
+        Console.WriteLine($"Your letter grade is {letterGrade}{gradeSign}");
 
         // determine if the grade percentage passed or not and display appropriate message
         if (intGrade >= 70)
