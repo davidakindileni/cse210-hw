@@ -2,11 +2,13 @@ using System;
 
 public class Video
 {
+    // define member variables
     private string _author;
     private string _title;
     private int _length;
     List<Comment> _commentList;
 
+    // define constructor
     public Video(string author, string title, int length, List<Comment> list)
     {
         this._author = author;
@@ -15,6 +17,7 @@ public class Video
         this._commentList = list;
     }
 
+    // define getters and setters
     public string GetAuthor()
     {
         return this._author;
@@ -27,6 +30,8 @@ public class Video
     {
         return this._length;
     }
+
+    // define methods
     public void Display()
     {
         Console.WriteLine($"Video Title   : {this._title}\nAuthor        : {this._author}\nLength        : {this._length} seconds" +
@@ -46,10 +51,4 @@ public class Video
         }
         Console.WriteLine("====================");
     }
-
-    public int CommentsCount()
-    {
-        return this._commentList.Count;
-    }
-
 }
