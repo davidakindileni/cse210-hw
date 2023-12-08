@@ -1,5 +1,3 @@
-using System;
-
 public class Order
 {
     private List<Product> _productList;
