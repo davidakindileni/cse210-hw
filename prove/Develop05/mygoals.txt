@@ -1,0 +1,4 @@
+50
+Negative Goal:; Sleeping Late; Go To Bed Early; 50; False
+Eternal Goal:; Pray Daily; Pray Morning And Evening; 50; False
+Check List Goal:; Hold Vigil; Hold Vigil Every Night; 100; False; 30; 1000; 0
